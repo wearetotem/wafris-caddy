@@ -1,11 +1,11 @@
 module github.com/wearetotem/wafris-caddy
 
-go 1.19
+go 1.21.3
 
 require (
 	github.com/caddyserver/caddy/v2 v2.7.5
 	github.com/go-redis/redis/v8 v8.11.5
-	go.uber.org/zap v1.25.0
+	go.uber.org/zap v1.26.0
 )
 
 require (
