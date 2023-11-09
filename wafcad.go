@@ -14,7 +14,7 @@ import (
 	"github.com/caddyserver/caddy/v2/caddyconfig/caddyfile"
 	"github.com/caddyserver/caddy/v2/caddyconfig/httpcaddyfile"
 	"github.com/caddyserver/caddy/v2/modules/caddyhttp"
-	"github.com/redis/go-redis/v9"
+	"github.com/go-redis/redis/v8"
 	"go.uber.org/zap"
 )
 
@@ -79,6 +79,7 @@ func (wc *WafrisCaddy) Provision(ctx caddy.Context) error {
 	}
 
 	wc.coreScript = redis.NewScript(wafris_core_lua)
+
 	wc.redisClient = rclient
 
 	LoadUserDefinedProxies(sugar)
@@ -125,7 +126,7 @@ func (wc WafrisCaddy) ServeHTTP(rw http.ResponseWriter, req *http.Request, next 
 		// request user agent
 		req.UserAgent(),
 		// request path
-		req.URL.RawPath,
+		req.URL.Path,
 		// request query string
 		req.URL.RawQuery,
 		// request host

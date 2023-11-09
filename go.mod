@@ -4,7 +4,6 @@ go 1.19
 
 require (
 	github.com/caddyserver/caddy/v2 v2.7.5
-	github.com/redis/go-redis/v9 v9.2.1
 	go.uber.org/zap v1.25.0
 )
 
@@ -31,6 +30,7 @@ require (
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/go-kit/kit v0.10.0 // indirect
 	github.com/go-logfmt/logfmt v0.5.1 // indirect
+	github.com/go-redis/redis/v8 v8.11.5 // indirect
 	github.com/go-sql-driver/mysql v1.7.1 // indirect
 	github.com/go-task/slim-sprig v0.0.0-20230315185526-52ccab3ef572 // indirect
 	github.com/golang/glog v1.1.0 // indirect
