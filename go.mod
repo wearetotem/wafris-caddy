@@ -1,4 +1,4 @@
-module github.com/Wafris/wafris-caddy
+module github.com/wearetotem/wafris-caddy
 
 go 1.19
 
